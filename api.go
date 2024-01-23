@@ -13,6 +13,11 @@ type Artist struct {
 }
 
 func main() {
+	http.HandleFunc("/", coloscopie)
+	http.ListenAndServe(":8080", nil)
+}
+
+func coloscopie(w http.ResponseWriter, r *http.Request) {
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	response, err := http.Get(url)
 
@@ -29,6 +34,9 @@ func main() {
 
 	var artists []Artist
     err = json.Unmarshal(body, &artists)
-
+    if err != nil {
+        http.Error(w, "Erreur lors de l'analyse JSON", http.StatusInternalServerError)
+        return
+    }
 	fmt.Println(artists)
 }
