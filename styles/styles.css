@@ -193,4 +193,54 @@ ul.dropdown-menu li {
 
 footer{
     background-color: #3d3d3d;
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+footer a{
+    color: white;
+
+}
+
+footer li {
+    margin: 10px 0px ;
+}
+
+
+.li_search_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background: #F0F0F0;
+    border-radius: 20px;
+    padding: 5px 5px 5px 10px;
+}
+
+.li_search_footer input {
+    width: 70%;
+    border: none;
+    background: #F0F0F0;
+}
+
+.li_search_footer span{
+    color:black
+}
+
+
+
+@media screen and (max-width: 756px) {
+
+    .li_search_footer{
+    display: flex;
+    justify-content: space-between;
+    }   
+
+
+}
+
+
+
+
