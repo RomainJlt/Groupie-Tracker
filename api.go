@@ -16,6 +16,7 @@ type Artist struct {
 
 func main() {
 	http.HandleFunc("/", server)
+	http.Handle("-------------------", http.StripPrefix("---------------", http.FileServer(http.Dir("----------------")))) // remplace les ------------- par le chemin du dossier contenant les fichiers css
 	http.ListenAndServe(":8080", nil)
 }
 
