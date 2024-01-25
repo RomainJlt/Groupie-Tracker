@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"encoding/json"
 )
+var artists []Artist
 
 type Artist struct {
 	Image string `json:"image"`
@@ -13,11 +14,11 @@ type Artist struct {
 }
 
 func main() {
-	http.HandleFunc("/", coloscopie)
+	http.HandleFunc("/", server)
 	http.ListenAndServe(":8080", nil)
 }
 
-func coloscopie(w http.ResponseWriter, r *http.Request) {
+func server(w http.ResponseWriter, r *http.Request) {
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	response, err := http.Get(url)
 
@@ -38,5 +39,9 @@ func coloscopie(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Erreur lors de l'analyse JSON", http.StatusInternalServerError)
         return
     }
-	fmt.Println(artists)
+
+	for _, artist := range artists {
+		fmt.Println(artist.Name)
+	}	
 }
+ 
