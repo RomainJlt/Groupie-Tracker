@@ -1,10 +1,11 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"html/template"
 	"io/ioutil"
 	"net/http"
-	"encoding/json"
 )
 var artists []Artist
 
@@ -33,15 +34,31 @@ func server(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Erreur lors de la lecture de la réponse:", err); return
 	}
 
-	var artists []Artist
     err = json.Unmarshal(body, &artists)
     if err != nil {
         http.Error(w, "Erreur lors de l'analyse JSON", http.StatusInternalServerError)
         return
     }
 
-	for _, artist := range artists {
-		fmt.Println(artist.Name)
-	}	
+	renderhtml(w)
 }
- 
+
+func renderhtml(w http.ResponseWriter) {
+	htmlFile, err := ioutil.ReadFile("index.html")
+	if err != nil {
+		http.Error(w, "Erreur lors de la lecture du fichier HTML", http.StatusInternalServerError)
+		return
+	}
+
+	tmpl, err := template.New("index").Parse(string(htmlFile))
+	if err != nil {
+		http.Error(w, "Erreur lors de l'analyse du modèle HTML", http.StatusInternalServerError)
+		return
+	}
+
+	err = tmpl.Execute(w, artists)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("Erreur lors de l'exécution du modèle HTML: %v", err), http.StatusInternalServerError)
+		return
+	}
+}
