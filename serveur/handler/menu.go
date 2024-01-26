@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"encoding/json"
@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 )
+
 var artists []Artist
 
 type Artist struct {
@@ -14,13 +15,7 @@ type Artist struct {
 	Name string `json:"name"`
 }
 
-func main() {
-	http.HandleFunc("/", server)
-	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles")))) // remplace les ------------- par le chemin du dossier contenant les fichiers css
-	http.ListenAndServe(":8080", nil)
-}
-
-func server(w http.ResponseWriter, r *http.Request) {
+func Index(w http.ResponseWriter, r *http.Request) {
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	response, err := http.Get(url)
 
@@ -41,11 +36,11 @@ func server(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-	renderhtml(w)
+	renderIndexHtml(w)
 }
 
-func renderhtml(w http.ResponseWriter) {
-	htmlFile, err := ioutil.ReadFile("index.html")
+func renderIndexHtml(w http.ResponseWriter) {
+	htmlFile, err := ioutil.ReadFile("../index.html")
 	if err != nil {
 		http.Error(w, "Erreur lors de la lecture du fichier HTML", http.StatusInternalServerError)
 		return
