@@ -17,7 +17,6 @@ a:hover{
     color: #c4c4c4;
     background-color: #212121;
     border-radius: 20px;
-    /* transition: all 0.5s ease-out; */
 }
 
 li {
@@ -43,7 +42,7 @@ header {
     justify-content: space-between;
     border-bottom: #0000001a solid 1px;
     padding: 10px;
-    align-items: center;
+    align-items: baseline;
 }
 
 .li_search {
@@ -52,7 +51,7 @@ header {
     width: 30%;
     background: #F0F0F0;
     border-radius: 20px;
-    padding: 5px;
+    padding: 3px 10px;
 }
 
 .li_search input {
