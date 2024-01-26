@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func infoArtiste(w http.ResponseWriter, r *http.Request) {
+func InfoArtiste(w http.ResponseWriter, r *http.Request) {
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	response, err := http.Get(url)
 
@@ -33,13 +33,13 @@ func infoArtiste(w http.ResponseWriter, r *http.Request) {
 }
 
 func renderArtisthHml(w http.ResponseWriter) {
-	htmlFile, err := ioutil.ReadFile("Groupie-Tracker/info_artiste.html")
+	htmlFile, err := ioutil.ReadFile("../info_artiste.html")
 	if err != nil {
 		http.Error(w, "Erreur lors de la lecture du fichier HTML", http.StatusInternalServerError)
 		return
 	}
 
-	tmpl, err := template.New("index").Parse(string(htmlFile))
+	tmpl, err := template.New("../info_artiste.html").Parse(string(htmlFile))
 	if err != nil {
 		http.Error(w, "Erreur lors de l'analyse du modèle HTML", http.StatusInternalServerError)
 		return

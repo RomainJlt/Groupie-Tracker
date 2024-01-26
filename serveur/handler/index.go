@@ -46,7 +46,7 @@ func renderIndexHtml(w http.ResponseWriter) {
 		return
 	}
 
-	tmpl, err := template.New("index").Parse(string(htmlFile))
+	tmpl, err := template.New("../index.html").Parse(string(htmlFile))
 	if err != nil {
 		http.Error(w, "Erreur lors de l'analyse du modèle HTML", http.StatusInternalServerError)
 		return
