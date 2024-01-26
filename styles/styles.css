@@ -14,7 +14,13 @@ a {
 }
 
 a:hover{
+<<<<<<< HEAD
 
+=======
+    color: #c4c4c4;
+    background-color: #212121;
+    border-radius: 20px;
+>>>>>>> 0f8f953 (debug)
 }
 
 li {
@@ -41,12 +47,15 @@ header {
     border-bottom: #0000001a solid 1px;
     padding: 10px;
     align-items: baseline;
+<<<<<<< HEAD
 }
 
 .menu_a:hover{
     color: #c4c4c4;
     background-color: #212121;
     border-radius: 20px;
+=======
+>>>>>>> 0f8f953 (debug)
 }
 
 .li_search {
