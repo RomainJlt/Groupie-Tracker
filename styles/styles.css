@@ -16,6 +16,12 @@ a {
     padding: 10px;
 }
 
+a:hover{
+    color: #c4c4c4;
+    background-color: #212121;
+    border-radius: 20px;
+}
+
 li {
     list-style: none;
 }
@@ -42,18 +48,13 @@ header {
     align-items: baseline;
 }
 
-.menu_a:hover{
-    color: #c4c4c4;
-    background-color: #212121;
-    border-radius: 20px;
-}
-
 .li_search {
     display: flex;
     justify-content: space-between;
     width: 30%;
     background: #F0F0F0;
     border-radius: 20px;
+    padding: 3px 10px;
     padding: 3px 10px;
 }
 
