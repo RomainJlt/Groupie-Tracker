@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <header>
+    <header id="top">
         <nav>
             <!-- Main menu with a dropdown section -->
             <ul class="menu">
@@ -25,16 +25,19 @@
                         <a href="#">About</a>
                         <a href="./info_artiste">Info artiste</a>
                         <a href="./test">Artiste</a>
+                        <a href="./info_artiste">Info artiste</a>
+                        <a href="./test">Artiste</a>
                     </section>
                 </section>
                 <!-- Logo section -->
                 <li>
                     <h1><strong><a href="/index">Groupie Tracker</a></strong></h1>
+                    <h1><strong><a href="/index">Groupie Tracker</a></strong></h1>
                 </li>
                 <!-- Additional menu items -->
-                <li class="menu-item"><a href="#">About</a></li>
-                <li class="menu-item"><a href="./info_artiste">Info artiste</a></li>
-                <li class="menu-item"><a href="./test">Artiste</a></li>
+                <li class="menu-item"><a class="menu_a" href="#">About</a></li>
+                <li class="menu-item"><a class="menu_a" href="./info_artiste">Info artiste</a></li>
+                <li class="menu-item"><a class="menu_a" href="./test">Artiste</a></li>
                 <!-- Search and account links -->
                 <li class="li_search">
                     <input type="text" placeholder="Search for products...">
@@ -46,15 +49,18 @@
 
     <main id="main_index">
         {{range .}}
-        <li>
-            <a href="./info_artiste.html"><img class="img_artiste" src="{{.Image}}"></a>
+        <li class="">
+            <a class="a_artiste" href="./info_artiste">
+                <img class="img_artiste" src="{{.Image}}">
+            </a>
         </li>
         {{end}}
+
     </main>
     <footer>
         <ul>
             <li><a href="">About</a></li>
-            <li><a href="">Artiste</a></li>
+            <li><a href="./info_artiste">Artiste</a></li>
         </ul>
         <ul>
             <li class="li_search_footer">
@@ -67,6 +73,16 @@
  
 
         <p>©2024</p>
+
+
+        <a href="#top" class="button_top">
+            <svg class="svgIcon" viewBox="0 0 384 512">
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+            </svg>
+        </a>
+
+
+
     </footer>
 
 
