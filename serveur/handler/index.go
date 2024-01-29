@@ -40,13 +40,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func renderIndexHtml(w http.ResponseWriter) {
-	htmlFile, err := ioutil.ReadFile("../index.html")
-	if err != nil {
-		http.Error(w, "Erreur lors de la lecture du fichier HTML", http.StatusInternalServerError)
-		return
-	}
-
-	tmpl, err := template.New("../index.html").Parse(string(htmlFile))
+	tmpl, err := template.ParseFiles("../index.html")
 	if err != nil {
 		http.Error(w, "Erreur lors de l'analyse du modèle HTML", http.StatusInternalServerError)
 		return
