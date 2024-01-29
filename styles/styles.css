@@ -14,13 +14,10 @@ a {
 }
 
 a:hover{
-<<<<<<< HEAD
-
-=======
     color: #c4c4c4;
     background-color: #212121;
     border-radius: 20px;
->>>>>>> 0f8f953 (debug)
+    (index)
 }
 
 li {
@@ -56,6 +53,12 @@ header {
     border-radius: 20px;
 =======
 >>>>>>> 0f8f953 (debug)
+}
+
+.menu_a:hover{
+    color: #c4c4c4;
+    background-color: #212121;
+    border-radius: 20px;
 }
 
 .li_search {
