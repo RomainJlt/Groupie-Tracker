@@ -17,9 +17,9 @@ align-items: center;
 
 .a_artiste :hover{
 
-    width: 210px;
+    width: 220px;
     height: auto; 
     color: #c4c4c4;
-    margin: 15px;
+    margin: 10px;
 }
 
