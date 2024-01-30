@@ -1,20 +1,19 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0px;
     margin: 0px;
     font-family: 'Poppins', sans-serif;
     background: #dedede;
     color: black;
-    scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
     color: black;
     padding: 10px;
-}
-
-a:hover{
-
 }
 
 li {
