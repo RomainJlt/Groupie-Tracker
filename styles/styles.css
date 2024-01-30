@@ -8,17 +8,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #dedede;
     color: black;
-    scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
     color: black;
     padding: 10px;
-}
-
-a:hover{
-
 }
 
 li {
