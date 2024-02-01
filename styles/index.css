@@ -1,0 +1,16 @@
+#main_index{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+#main_index li{
+    margin: 20px;
+}
+
+.img_artiste{
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+}
