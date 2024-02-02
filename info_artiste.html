@@ -39,7 +39,10 @@
                 <li class="menu-item"><a href="./test">Artiste</a></li>
                 <!-- Search and account links -->
                 <li class="li_search">
-                    <input type="text" placeholder="Search for products...">
+                    <form action="/search" method="get">
+                        <input type="text" name="query" placeholder="Search for artist...">
+                        <button type="submit">Search</button>
+                    </form>
                     <a href=""><span class="mdi mdi-magnify"></span></a>
                 </li>
             </ul>
