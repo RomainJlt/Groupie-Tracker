@@ -59,16 +59,16 @@
 
         </section>
 
-        
 
+        {{range .}}
 
 
         <li class="">
             <a class="a_artiste" href="./info_artiste">
-                <img class="img_artiste" src="./img/queen.jpeg">
+                <img class="img_artiste" src="{{.Image}}">
             </a>
         </li>
-
+        {{end}}
         <section class="sec_date">
             <p>Creation date:</p>
             <p>First album:</p>

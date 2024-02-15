@@ -1,9 +1,9 @@
 #main_index{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .img_artiste{
@@ -21,4 +21,3 @@ align-items: center;
     color: #c4c4c4;
     margin: 10px;
 }
-

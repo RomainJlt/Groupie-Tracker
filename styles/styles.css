@@ -95,40 +95,40 @@ ul.dropdown-menu li {
     background-color: grey;
     border: 2px solid black;
     border-radius: 15px 15px 15px 15px;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 8px 10px;
-    text-decoration: none;
-    display: block;
-    transition: 0.1s;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: black;
-    color: #212121;
-  }
-  
-  .dropdown-content a:focus {
-    background-color: #212121;
-  }
-  
-  .dropdown-content #top:hover {
-    border-radius: 0px 13px 0px 0px;
-  }
-  
-  .dropdown-content #bottom:hover {
-    border-radius: 0px 0px 13px 13px;
-  }
-  
-  .paste-button:hover button {
-    border-radius: 15px 15px 0px 0px;
-  }
-  
-  .paste-button:hover .dropdown-content {
-    display: block;
-  }
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  color: #212121;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
 
 
 
@@ -275,45 +275,44 @@ footer li {
     transition-duration: 0.3s;
     overflow: hidden;
     /* position: relative; */
-  }
-  
-  .svgIcon {
-    width: 12px;
-    transition-duration: 0.3s;
-  }
-  
-  .svgIcon path {
-    fill: white;
-  }
-  
-  .button_top:hover {
-    width: 140px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: rgb(181, 160, 255);
-    align-items: center;
-  }
-  
-  .button_top:hover .svgIcon {
-    /* width: 20px; */
-    transition-duration: 0.3s;
-    transform: translateY(-200%);
-  }
-  
-  .button_top::before {
-    position: absolute;
-    bottom: -20px;
-    content: "Back to Top";
-    color: white;
-    /* transition-duration: .3s; */
-    font-size: 0px;
-  }
-  
-  .button_top:hover::before {
-    font-size: 13px;
-    opacity: 1;
-    bottom: unset;
-    /* transform: translateY(-30px); */
-    transition-duration: 0.3s;
-  }
-  
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button_top:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.button_top:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button_top::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button_top:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
