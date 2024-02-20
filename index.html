@@ -12,6 +12,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/index.css">
+
+    <!-- JS -->
+    <script defer src="./js/search_bar.js"></script>
 </head>
 <body>
     <header id="top">
@@ -39,7 +42,7 @@
                 <li class="menu-item"><a class="menu_a" href="./test">Artiste</a></li>
                 <!-- Search and account links -->
                 <li class="li_search">
-                    <input type="text" placeholder="Search for products...">
+                    <input type="text" placeholder="Search for products..." id="searchbar" oninput="search_artiste()">
                     <a href=""><span class="mdi mdi-magnify"></span></a>
                 </li>
             </ul>

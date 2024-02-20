@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/info_atiste.css">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- JS -->
+    <script defer src="./js/search_bar.js"></script>
+    <script defer src="./js/map.js"></script>
 </head>
 <body class="body_info">
     <header>
@@ -47,34 +51,45 @@
     </header>
 
     <main class="main_info">
-        <section>
-            <h2>Pink Floyd</h2>
-            <ul>
-                <li><h3>Members:</h3></li>
-                <li><p>toto</p></li>
-                <li><p>toto</p></li>
-                <li><p>toto</p></li>
-                <li><p>toto</p></li>
-            </ul>
+        <section class="main_top">
+            <section>
+                <h2>Pink Floyd</h2>
+                <ul>
+                    <li><h3>Members:</h3></li>
+                    <li><p>toto</p></li>
+                    <li><p>toto</p></li>
+                    <li><p>toto</p></li>
+                    <li><p>toto</p></li>
+                </ul>
 
+            </section>
+
+
+            <!-- {{range .}} -->
+
+
+            <li class="">
+                <a class="a_artiste" href="./info_artiste">
+                    <img class="img_artiste" src="./img/queen.jpeg">
+                </a>
+            </li>
+            <!-- {{end}} -->
+            <section class="sec_date">
+                <p>Creation date:</p>
+                <p>First album:</p>
+                <p>Concerts:</p>
+
+            </section>
         </section>
 
 
-        {{range .}}
 
 
-        <li class="">
-            <a class="a_artiste" href="./info_artiste">
-                <img class="img_artiste" src="{{.Image}}">
-            </a>
-        </li>
-        {{end}}
-        <section class="sec_date">
-            <p>Creation date:</p>
-            <p>First album:</p>
-            <p>Concerts:</p>
 
-        </section>
+    <!-- Div pour afficher la carte Google -->
+    <div class="main_map" id="map"></div>
+
+
         
 
     </main>

@@ -4,12 +4,27 @@
     flex-direction: column;
 }
 
-
 .main_info{
     display: flex;
-    justify-content: space-evenly;
-    margin: 50px 50px;
     flex: 1;
+    flex-direction: column;
+    margin: 50px;
+    text-align: center;
+
+}
+
+.main_top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main_map{
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
 }
 
 .sec_date{
