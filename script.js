@@ -10,7 +10,7 @@ var markerParis = L.marker([48.8566, 2.3522]).addTo(mymap);
 markerParis.bindPopup("<b>Paris</b>").openPopup();
 
 var markerBerlin = L.marker([52.5200, 13.4050]).addTo(mymap);
-markerBerlin.bindPopup("<b>Berlin</b>").openPopup();
+markerBerlin.bindPopup("<b>Berlin: ACDC le 31 Février.</b><br><img src='acdc logo.jpeg' width ='200'>").openPopup();
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
