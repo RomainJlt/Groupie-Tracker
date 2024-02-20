@@ -110,4 +110,4 @@ func renderhtml(w http.ResponseWriter) {
 		http.Error(w, fmt.Sprintf("Erreur lors de l'exécution du modèle HTML: %v", err), http.StatusInternalServerError)
 		return
 	}
-}
+} 
