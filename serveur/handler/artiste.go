@@ -8,6 +8,8 @@ import (
 	"net/http"
 )
 
+var artists []Artist
+
 func InfoArtiste(w http.ResponseWriter, r *http.Request) {
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	response, err := http.Get(url)
