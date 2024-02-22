@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -40,7 +44,10 @@ header {
     border-bottom: #0000001a solid 1px;
     padding: 10px;
     align-items: baseline;
+    align-items: baseline;
 }
+
+
 
 
 
@@ -83,6 +90,7 @@ ul.dropdown-menu {
 ul.dropdown-menu li {
     padding: 10px;
 }
+
 
 
 
@@ -161,6 +169,7 @@ footer{
     color: white;
     padding: 50px;
     padding-bottom: 70px;
+    padding-bottom: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -198,6 +207,9 @@ footer li {
 
 
 
+
+
+
 @media screen and (max-width: 756px) {
 
     .li_search_footer{
@@ -211,6 +223,67 @@ footer li {
 
 
 
+.button_top {
+    position: fixed;
+    bottom: 20px;
+    right: center;
+    z-index: 999;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button_top:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.button_top:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button_top::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button_top:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
 .button_top {
     position: fixed;
     bottom: 20px;

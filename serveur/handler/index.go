@@ -6,9 +6,11 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+	"strings"
 )
 
 var artists []Artist
+var filteredartists []Artist
 
 type Artist struct {
 	Image string `json:"image"`
@@ -16,6 +18,7 @@ type Artist struct {
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
+	query := r.URL.Query().Get("query")
 	url := "https://groupietrackers.herokuapp.com/api/artists"
 	response, err := http.Get(url)
 
@@ -35,6 +38,16 @@ func Index(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Erreur lors de l'analyse JSON", http.StatusInternalServerError)
         return
     }
+
+	for _, artist := range artists {
+		if query != "" {
+			if strings.Contains(strings.ToLower(artist.Name), strings.ToLower(query)) {
+				filteredartists = append(filteredartists, artist)
+			}
+		} else {
+			filteredartists = append(filteredartists, artist)
+		}
+	}
 
 	renderIndexHtml(w)
 }
