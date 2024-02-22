@@ -44,45 +44,38 @@ header {
 
 
 
-.li_search {
+.li_search form{
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 300px;
     background: #F0F0F0;
     border-radius: 20px;
     padding: 3px 10px;
 }
 
-.li_search input {
-    width: 70%;
+.li_search form input {
+    width: 500px;
     border: none;
     background: #F0F0F0;
+    margin-right: 20px;
+}
+
+form button{
+    border: none;
+    background: #F0F0F0;
+    cursor: pointer;
 }
 
 span {
-    margin: 10px;
-    cursor: pointer;
+    /* margin: 10px;
+    cursor: pointer; */
 }
 
-.burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
 
-ul.dropdown-menu {
-    display: none;
-    list-style: none;
-    position: absolute;
-    background: #FFF;
-    border: 1px solid #000;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
 
-ul.dropdown-menu li {
-    padding: 10px;
-}
+
+
+
 
 
 
@@ -92,43 +85,19 @@ ul.dropdown-menu li {
         margin-left: -25px;
     }
 
-    main {
-        margin-left: -100000px;
-    }
-
     h1{
         padding: 10px;
     }
 
     .menu {
         flex-direction: column;
-        align-items: flex-start;
         align-items: center;
-        flex-direction: row;
+        flex-wrap: wrap;
+
 
     }
 
-    .burger-menu {
-        display: flex;
-    }
 
-    .menu-item {
-        display: none;
-    }
-
-    .burger-menu:hover + .dropdown-menu,
-    .dropdown-menu:hover {
-        display: block;
-    }
-
-    .li_search{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    input, .a_search{
-        display: none;
-    }
 }
 
 
