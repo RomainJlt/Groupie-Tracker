@@ -18,6 +18,10 @@
     <!-- JS -->
     <script defer src="./js/search_bar.js"></script>
     <script defer src="./js/map.js"></script>
+
+    <!-- MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body class="body_info">
     <header id="top">
@@ -73,81 +77,19 @@
 
 
 
-    <!-- Div pour afficher la carte Google -->
-    <div class="main_map" id="map"></div>
+    <!-- Div pour afficher la carte -->
+    <div id="map"></div>
 
-
-        
-    <main class="main_info">
-        <section class="main_top">
-            <section>
-                <h2>Pink Floyd</h2>
-                <ul>
-                    <li><h3>Members:</h3></li>
-                    <li><p>toto</p></li>
-                    <li><p>toto</p></li>
-                    <li><p>toto</p></li>
-                    <li><p>toto</p></li>
-                </ul>
-
-            </section>
-
-
-            <!-- {{range .}} -->
-
-
-            <li class="">
-                <a class="a_artiste" href="#">
-                    <img class="img_artiste" src="{{.Image}}">
-                </a>
-            </li>
-            <!-- {{end}} -->
-            <section class="sec_date">
-                <p>Creation date:</p>
-                <p>First album:</p>
-                <p>Concerts:</p>
-
-            </section>
-        </section>
-
-
-
-
-
-    <!-- Div pour afficher la carte Google -->
-    <div class="main_map" id="map"></div>
-
-
-        
 
     </main>
 
     <footer>
         <ul>
             <li><a href="./index">Liste des artistes</a></li>
-            <li><a href="./index">Liste des artistes</a></li>
-        </ul>
-        <ul>
-            <li class="li_search_footer">
-                <input type="text" placeholder="Search for products...">
-                <a href=""><span class="mdi mdi-magnify"></span></a>
-            </li>
         </ul>
 
-
- 
 
         <p>©2024</p>
-
-
-        <a href="#top" class="button_top">
-            <svg class="svgIcon" viewBox="0 0 384 512">
-                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
-            </svg>
-        </a>
-
-
-
 
 
         <a href="#top" class="button_top">
