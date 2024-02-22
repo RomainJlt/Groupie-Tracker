@@ -20,33 +20,17 @@
     <script defer src="./js/map.js"></script>
 </head>
 <body class="body_info">
-    <header>
+    <header id="top">
         <nav>
             <!-- Main menu with a dropdown section -->
             <ul class="menu">
-                <section class="paste-button">
-                    <span class="mdi mdi-menu burger-menu"></span>
-                    <!-- Dropdown content for the main menu -->
-                    <section class="dropdown-content">
-                        <a href="#">About</a>
-                        <a href="./info_artiste">Info artiste</a>
-                        <a href="#">Artiste</a>
-                    </section>
-                </section>
                 <!-- Logo section -->
                 <li>
-                    <h1><strong><a href="./index">Groupie Tracker</a></strong></h1>
+                    <h1><strong><a href="/index">Groupie Tracker</a></strong></h1>
                 </li>
-                <!-- Additional menu items -->
-                <li class="menu-item"><a href="#">About</a></li>
-                <li class="menu-item"><a href="./info_artiste">Info artiste</a></li>
-                <li class="menu-item"><a href="./test">Artiste</a></li>
                 <!-- Search and account links -->
                 <li class="li_search">
-                    <form action="/search" method="get">
-                        <input type="text" name="query" placeholder="Search for artist...">
-                        <button type="submit">Search</button>
-                    </form>
+                    <input type="text" placeholder="Search for products..." id="searchbar" oninput="search_artiste()">
                     <a href=""><span class="mdi mdi-magnify"></span></a>
                 </li>
             </ul>
@@ -100,8 +84,7 @@
 
     <footer>
         <ul>
-            <li><a href="">About</a></li>
-            <li><a href="./info_artiste">Artiste</a></li>
+            <li><a href="./index">Liste des artistes</a></li>
         </ul>
         <ul>
             <li class="li_search_footer">
@@ -125,7 +108,6 @@
 
 
     </footer>
-
 
 
 </body>
