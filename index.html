@@ -27,8 +27,10 @@
                 </li>
                 <!-- Search and account links -->
                 <li class="li_search">
-                    <input type="text" placeholder="Search for products..." id="searchbar" oninput="search_artiste()">
-                    <a href=""><span class="mdi mdi-magnify"></span></a>
+                    <form action="/search" method="get">
+                        <input type="text" placeholder="Search for products..." name="query">
+                        <button type="submit"><span class="mdi mdi-magnify"></span></button>
+                    </form>
                 </li>
             </ul>
         </nav>
